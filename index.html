@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -296,10 +297,10 @@
       <span class="logo-text">Air<span>AI</span></span>
     </a>
     <div class="nav-links">
-      <a onclick="scrollTo('solutions')">Solutions</a>
-      <a onclick="scrollTo('how-it-works')">How It Works</a>
-      <a onclick="scrollTo('features')">Features</a>
-      <a onclick="scrollTo('pricing')">Pricing</a>
+      <a onclick="goTo('solutions')">Solutions</a>
+      <a onclick="goTo('how-it-works')">How It Works</a>
+      <a onclick="goTo('features')">Features</a>
+      <a onclick="goTo('pricing')">Pricing</a>
     </div>
     <div class="nav-cta">
       <button class="btn btn-primary" onclick="bookDemo()">Book a Demo</button>
@@ -314,10 +315,10 @@
 
 <!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobileMenu">
-  <a onclick="scrollTo('solutions');toggleMenu()">Solutions</a>
-  <a onclick="scrollTo('how-it-works');toggleMenu()">How It Works</a>
-  <a onclick="scrollTo('features');toggleMenu()">Features</a>
-  <a onclick="scrollTo('pricing');toggleMenu()">Pricing</a>
+  <a onclick="goTo('solutions');toggleMenu()">Solutions</a>
+  <a onclick="goTo('how-it-works');toggleMenu()">How It Works</a>
+  <a onclick="goTo('features');toggleMenu()">Features</a>
+  <a onclick="goTo('pricing');toggleMenu()">Pricing</a>
   <button class="btn btn-primary" onclick="bookDemo()">Book a Demo</button>
 </div>
 
@@ -335,17 +336,17 @@
         Book a Demo
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </button>
-      <button class="btn btn-outline" onclick="scrollTo('how-it-works')">
+      <button class="btn btn-outline" onclick="goTo('how-it-works')">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00e5ff" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
         See How It Works
       </button>
     </div>
     <div class="pills">
-      <div class="pill" onclick="scrollTo('solutions')">
+      <div class="pill" onclick="goTo('solutions')">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#00e5ff" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
         Spam Filter
       </div>
-      <div class="pill" onclick="scrollTo('solutions')">
+      <div class="pill" onclick="goTo('solutions')">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#00e5ff" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.44 2 2 0 0 1 3.58 1.25h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
         AI Receptionist
       </div>
@@ -603,9 +604,9 @@
       <div class="footer-col">
         <h4>Product</h4>
         <ul>
-          <li><a onclick="scrollTo('how-it-works')">How It Works</a></li>
-          <li><a onclick="scrollTo('features')">Features</a></li>
-          <li><a onclick="scrollTo('pricing')">Pricing</a></li>
+          <li><a onclick="goTo('how-it-works')">How It Works</a></li>
+          <li><a onclick="goTo('features')">Features</a></li>
+          <li><a onclick="goTo('pricing')">Pricing</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -631,7 +632,7 @@
   });
 
   // Smooth scroll
-  function scrollTo(id) {
+  function goTo(id) {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
   }
   function scrollToTop() {

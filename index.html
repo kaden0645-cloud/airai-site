@@ -57,10 +57,13 @@
       text-decoration: none; cursor: pointer;
     }
     .logo-icon {
-      width: 36px; height: 36px; border-radius: 10px;
-      background: linear-gradient(135deg, var(--cyan), var(--blue));
+      width: 38px; height: 38px; border-radius: 12px;
+      background: linear-gradient(135deg, rgba(0,229,255,0.18), rgba(41,121,255,0.22));
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(0,229,255,0.35);
+      box-shadow: 0 2px 12px rgba(0,229,255,0.15), inset 0 1px 0 rgba(255,255,255,0.15);
       display: flex; align-items: center; justify-content: center;
-      font-weight: 800; font-size: 16px; color: #0a0a12;
     }
     .logo-text { font-weight: 700; font-size: 18px; color: var(--text); }
     .logo-text span { background: linear-gradient(135deg, var(--cyan), var(--blue)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
@@ -293,7 +296,19 @@
 <nav id="navbar">
   <div class="nav-inner">
     <a class="logo" onclick="scrollToTop()">
-      <div class="logo-icon">⚡</div>
+      <div class="logo-icon">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="url(#windGrad)" stroke-width="2" stroke-linecap="round">
+          <defs>
+            <linearGradient id="windGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#00e5ff"/>
+              <stop offset="100%" stop-color="#2979ff"/>
+            </linearGradient>
+          </defs>
+          <path d="M9.59 4.59A2 2 0 1 1 11 8H2"/>
+          <path d="M12.59 19.41A2 2 0 1 0 14 16H2"/>
+          <path d="M6.59 11.41A2 2 0 1 1 8 15H2"/>
+        </svg>
+      </div>
       <span class="logo-text">Air<span>AI</span></span>
     </a>
     <div class="nav-links">
@@ -612,7 +627,19 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <div class="logo">
-          <div class="logo-icon">⚡</div>
+          <div class="logo-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="url(#windGrad2)" stroke-width="2" stroke-linecap="round">
+              <defs>
+                <linearGradient id="windGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#00e5ff"/>
+                  <stop offset="100%" stop-color="#2979ff"/>
+                </linearGradient>
+              </defs>
+              <path d="M9.59 4.59A2 2 0 1 1 11 8H2"/>
+              <path d="M12.59 19.41A2 2 0 1 0 14 16H2"/>
+              <path d="M6.59 11.41A2 2 0 1 1 8 15H2"/>
+            </svg>
+          </div>
           <span class="logo-text">Air<span>AI</span></span>
         </div>
         <p>AI-powered automation for HVAC businesses. Never miss a call, book more jobs, grow your revenue.</p>
